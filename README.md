@@ -2,13 +2,17 @@
 ---
 ## Project Overview
 ---
+
 This project aims to explore Ontario’s labour market trends from January to November 2024 by analyzing labour force participation rates, unemployment rates, wage disparities based on population and industry demographics, and the impact of inflation on job vacancies and employment trends. This project focuses on the themes of Predictive Analytics by identifying and understanding patterns over time and uncovering relationships between variables. In addition, this project will follow the theme of Classification and Regression to predict labour
 market outcomes based on demographic and economic variables. By exploring the dynamics and the interconnected relationships between datasets, this project aims to provide insights on the effect of inflation on the labour market and the cruciality of understanding the role of the labour market conditions in shaping economic growth and stability.
+
 ---
 ### Project Approach 
 ---
+
 This analysis will utilize three datasets: the Labour Force Survey (LFS), Job Vacancies and Payroll Employees, and Job Vacancy Rate by Industry Sector, Monthly, Adjusted for Seasonality (JV), and The Consumer Price Index (CPI) dataset. The primary tool for this analysis will be Python through Jupyter Notebook GUI. Key libraries, including Pandas, NumPy, Matplotlib, Seaborn, Plotly, Scikit-learn, Statsmodels, SciPy, and XGBoost, will be used throughout the analysis. 
 The project will proceed in several phases, starting with data preprocessing, including handling missing values, checking for duplicates, merging datasets, and feature engineering (e.g., computing the unemployment rate, labour participation rate, and inflation impact). Next, exploratory data analysis (EDA) will be conducted using univariate, bivariate, and multivariate methods, including summary statistics, visualizations (e.g., line graphs, bar charts, box plots, histograms, pair plots, scatter plots), and correlation matrices. Statistical analysis will follow, utilizing parametric and nonparametric tests, along with feature selection techniques such as Principal Component Analysis (PCA) and Recursive Feature Elimination (RFE). Finally, machine learning models will be developed, starting with baseline models and incorporating feature selection. Models like linear regression will predict wage levels and joblessness duration, Random Forest or XGBoost will be used for classification tasks (i.e. predicting the likelihood of unemployment or labour force participation), and Vector Autoregression will be employed for time-series analysis alongside Granger Causality tests to examine the interrelationships between multiple variables over time. Models will be evaluated based on accuracy, precision, recall, F1-score, R-squared, root mean squared error (RMSE) and mean absolute error (MAE) metrics.
+
 ---
 ### Project Questions & Approach 
 ---
