@@ -29,7 +29,7 @@ The project will proceed in several phases, starting with data preprocessing, in
 ---
 ### Current Progress Summary
 --- 
-LFS Dataset
+#### LFS Dataset
   - Data cleaning, descriptive statistics was calculated, dataframe was checked for duplicates, and outliers for numerical variables were observed through box plots.
   - Addressed missing values in the dataset
       - All missing values are due to survey design, survey respondents responded to survey questions that are applicable to them.
@@ -47,13 +47,13 @@ LFS Dataset
       -   Variable 'Monthly Labour Force Participation Rate' was engineered. 'Monthly Labour Force Participation Rate' = (total respondents in the labour force per month/ total                  working age population per month) * 100
       -   Variable 'Monthly Unemployment Rate' was engineered. 'Monthly Unemployment Rate' = (total unemployed respondents/total respondents in the labour force per month) * 100
 
-JV Dataset
+#### JV Dataset
   - Data cleaning, descriptive statistics was calculated, transformed dataframe into wide pivot table with variables of interest only, and outliers for numerical variables were observed through box plots.
   - Addressed missing values in the dataset. 2 missing values were observed for the Utilities industry along with 2 missing values were observed for the Information and Cultural         industries. The distributions of each industry was observed for the 'Job Vacancies (#)', and 'Job Vacancy Rate (%)' missing values. Shapiro statistical test was done to confirm normal      distribution and missing values were imputed with the mean.
   - Trends over time were observed 'Job Vacancies (#)', 'Payroll Employees (#)', and 'Job Vacancy Rate (%)' for each industry through sub-line plots.
   - Industries were mapped to LFS and JV dataframe was merged with LFS. 
 
-CPI Dataset
+#### CPI Dataset
   - Data cleaning, descriptive statistics were calculated, transformed dataframe into wide pivot table with variables of interest only.
   - Feature engineered 'Month over Month Inflation Rate Percentage Change'
   - Trends over time were observed in 'Month over Month Inflation Rate Percentage Change' through line plots.
@@ -61,7 +61,6 @@ CPI Dataset
 ---
 ### Identified Limitations 
 --- 
-- JV and CPI datasets are adjusted for seasonality; however, LFS is not.
 - Industry NAICS codes differ between datasets. LFS dataset uses the 2017 labour variant whereas JV uses the 2022 labour variant. Industries in LFS were spread across a wider range of categories (21 categories) compared to JV (20 categories). In addition, some categories were combined/split differently in LFS and JV.
     - Agriculture, forestry, fishing and hunting [11] in JV is considered one industry. In LFS, they are three separate industries. The overall statistics in JV were used for each         sub-industry. This can obscure important differences in employment trends, job vacancies, and seasonal patterns across the three sectors. This may lead to misinterpretations,          limiting the accuracy of industry-specific insights and comparisons.
     - Manufacturing [31-33] in JV is considered one industry. In LFS, it is split into two categories: Manufacturing - durable goods, and Manufacturing - non-durable goods. The            overall statistics in JV were used for each sub-industry. This can obscure important differences in employment trends, job vacancies, and seasonal patterns across the three            sectors. This may lead to misinterpretations, limiting the accuracy of industry-specific insights and comparisons.
