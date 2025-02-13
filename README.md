@@ -2,14 +2,12 @@
 ---
 ## Project Overview
 ---
-
 This project aims to explore Ontario’s labour market trends from January to November 2024 by analyzing labour force participation rates, unemployment rates, wage disparities based on population and industry demographics, and the impact of inflation on job vacancies and employment trends. This project focuses on the themes of Predictive Analytics by identifying and understanding patterns over time and uncovering relationships between variables. In addition, this project will follow the theme of Classification and Regression to predict labour
 market outcomes based on demographic and economic variables. By exploring the dynamics and the interconnected relationships between datasets, this project aims to provide insights on the effect of inflation on the labour market and the cruciality of understanding the role of the labour market conditions in shaping economic growth and stability.
 
 ---
 ### Project Approach 
 ---
-
 This analysis will utilize three datasets: the Labour Force Survey (LFS), Job Vacancies and Payroll Employees, and Job Vacancy Rate by Industry Sector, Monthly, Adjusted for Seasonality (JV), and The Consumer Price Index (CPI) dataset. The primary tool for this analysis will be Python through Jupyter Notebook GUI. Key libraries, including Pandas, NumPy, Matplotlib, Seaborn, Plotly, Scikit-learn, Statsmodels, SciPy, and XGBoost, will be used throughout the analysis. 
 The project will proceed in several phases, starting with data preprocessing, including handling missing values, checking for duplicates, merging datasets, and feature engineering (e.g., computing the unemployment rate, labour participation rate, and inflation impact). Next, exploratory data analysis (EDA) will be conducted using univariate, bivariate, and multivariate methods, including summary statistics, visualizations (e.g., line graphs, bar charts, box plots, histograms, pair plots, scatter plots), and correlation matrices. Statistical analysis will follow, utilizing parametric and nonparametric tests, along with feature selection techniques such as Principal Component Analysis (PCA) and Recursive Feature Elimination (RFE). Finally, machine learning models will be developed, starting with baseline models and incorporating feature selection. Models like linear regression will predict wage levels and joblessness duration, Random Forest or XGBoost will be used for classification tasks (i.e. predicting the likelihood of unemployment or labour force participation), and Vector Autoregression will be employed for time-series analysis alongside Granger Causality tests to examine the interrelationships between multiple variables over time. Models will be evaluated based on accuracy, precision, recall, F1-score, R-squared, root mean squared error (RMSE) and mean absolute error (MAE) metrics.
 
@@ -72,12 +70,21 @@ The project will proceed in several phases, starting with data preprocessing, in
 - Clarify why the selected period (January–October 2024) was chosen and whether seasonal effects will be considered.
     - Labour Force Survey Dataset along with Consumer Price Index Dataset have data available from January - December 2024. However, Job Vacancies, Payroll Employees, and Job Vacancy      Rate by Industry Sector Dataset is limited to the time frame of January - November 2024. I am hopeful in the next few weeks Statistics Canada will update the dataset to include        December 2024 allowing my analysis to be from January - December of 2024.
     - Initially, the Job Vacancies Dataset only had data for the time frame January - October 2024 but has since been updated on Statistics Canada to include November 2024.
-  
+- Will the analysis control for seasonal effects, given that labour market trends fluctuate throughout the year?
+    - Minor controls for seasonal effects will be applied in the analysis because the datasets JV, LFS, and CPI are already adjusted for seasonality
+        - Checking for residual seasonality using Autocorrelation Function and Partial Autocorrelation function
+        - Ensuring that the differencing parameter in an ARIMA model is chosen based on stationarity tests (Augmented Dickey-Fuller test) to prevent unnecessary differencing                     that could reintroduce or distort seasonal components.
+        - Compare findings with external sources to validate conclusions.
+- Are there any missing data concerns, delays in data availability, or biases in self-reported survey responses?
+    - Data Availability Delays:
+        - In the JV dataset, there is a delay in the data availability for December 2024. Due to this delay, the analysis is being restricted to the time frame of January-November               2024 until further notice.
+    - Missing Data Concerns:
+        -  During the EDA report, majority of missing values in LFS dataset were deemed due to survey design. Variables of interest were maintained, and variables deemed to be of                 limited relevance to the analysis were dropped. No imputation methods were used.
+        -  In JV, there were 4 missing values due to the quality of the data being too unreliable to be published (symbol F). Imputations methods were used.
+    -  Biases in Self-reported Survey responses:
 - The economic significance of the findings could be better framed. How might policymakers or businesses use these insights?
 - Since the study relies on government data, specifying whether the methodology can be easily adapted for future years.
-- Are there any missing data concerns, delays in data availability, or biases in self-reported survey responses?
 - Why XGBoost vs. Random Forest was chosen for classification?
-- Will the analysis control for seasonal effects, given that labour market trends fluctuate throughout the year?
 - Would simple statistical models (e.g., ARIMA for time series) be used as a benchmark against ML models?
 - Will techniques like GridSearchCV be employed to fine-tune models?
 
