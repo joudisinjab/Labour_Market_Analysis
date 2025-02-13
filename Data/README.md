@@ -17,7 +17,7 @@ The Labour Force Survey (LFS) is a monthly survey that provides key labour marke
 - Data Sources: Data is collected directly from respondents via in-person interviews, telephone interviews, or self-completed electronic questionnaires. Proxy reporting accounts for 65% of responses.
 - Reference Period: Data is collected for the week containing the 15th day of the month, with revisions every five years to align with census population estimates.
 
-4.Methodology:
+4. Methodology:
 - Sampling Design: A probability-based sample ensures representativeness at national, provincial, and sub-provincial levels.
 - Weighting: Sample data are weighted to account for selection probabilities, non-response, and coverage errors. Final weights align with population control totals.
 - Imputation: Missing data is addressed using carry-forward, deterministic, and donor imputation methods.
