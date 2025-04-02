@@ -1,4 +1,0 @@
-Target_Variable,Best_Model,Lowest_MAPE (%)
-Average_Hourly_Wage,VAR,0.01
-Inflation_Rate_YoY,VAR,15.48
-Unemployment_Rate(%),VECM,2.68
