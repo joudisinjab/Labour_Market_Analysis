@@ -38,8 +38,15 @@ This project analyzes Canada's labor market from 2021 to 2024, investigating the
 ### 6. Demographic Insights
 - Investigated labor market outcomes by gender, age, education, and immigration status, including intersections of these demographics.
 
-### 7. Dynamic Modeling (VECM)
-- Implemented a Vector Error Correction Model to examine short-run dynamics, long-run relationships, and impulse responses between unemployment, wages, vacancies, and inflation.
+### 7. Forecasting Labour Market Dynamics (VECM, VAR, ARIMA)
+- Developed and compared three time series models — Vector Error Correction Model (VECM), Vector Autoregression (VAR), and ARIMA to capture and forecast dynamic relationships between key labour market indicators: unemployment rate, average hourly wage, and inflation rate.
+- - Applied VAR to model short-run dynamics without assuming cointegration.
+- Used VECM to identify long-run cointegrating relationships and model short-run adjustments. 
+- Used ARIMA for univariate forecasting of each indicator, tuning hyperparameters using auto_arima.
+- Forecasted values for January and February 2025 and compared against actuals.
+- Evaluated models using MAE, RMSE, and MAPE to identify the best-performing model per indicator:
+  - VECM performed best for forecasting unemployment rate.
+  - VAR slightly outperformed others for hourly wage and inflation.
 
 ### 8. Predictive Modeling
 - Built classification models to predict industry-level unemployment increases.
@@ -58,7 +65,7 @@ This project analyzes Canada's labor market from 2021 to 2024, investigating the
 - `README.md`: This file, summarizing the project's scope and repository organization.
 
 ## Tools and Libraries Used
-- Python (pandas, numpy, matplotlib, seaborn, statsmodels, scikit-learn, XGBoost, sweetviz)
+- Python (pandas, numpy, matplotlib, seaborn, statsmodels, scikit-learn, XGBoost, sweetviz, pmdarima)
 - Jupyter Notebooks for interactive analysis and documentation
 
 
